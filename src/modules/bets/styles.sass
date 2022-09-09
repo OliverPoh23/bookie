@@ -1,0 +1,55 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.bets
+  &__wrap
+    background-color: getColor('theme')
+    border-radius: $r-primary
+    padding: 20px
+    margin-bottom: 30px
+    +media-max($bp-sm)
+      padding: 15px
+
+  // Buttons
+  &__buttons
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 20px
+  &__button
+    width: calc( 50% - 10px )
+    padding: 17px 5px
+    text-align: center
+    font-size: rem(14px)
+    line-height: 1
+    font-weight: 700
+    transition: 0.3s
+    cursor: pointer
+    user-select: none
+    border-radius: $r-primary
+    background-color: $c-gray-2
+    color: $c-gray-3
+    +media-max($bp-xl)
+      padding: 13px 5px
+    &:focus
+      box-shadow: $s-alt
+    &.is-active
+      background-color: $c-primary-1
+      color: $c-light
+
+  // Balance
+  &__balance
+    border-top: 1px dashed $c-gray-3
+    border-bottom: 1px dashed $c-gray-3
+    padding: 15px 0
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &-current,
+    &-pending
+      line-height: 1
+
+  // Footer
+  &__footer
+    +media-max($bp-lg)
+      padding: 0 20px 20px

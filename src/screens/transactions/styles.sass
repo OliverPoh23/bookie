@@ -1,0 +1,45 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.transactions-screen
+  &__header
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    justify-content: space-between
+    // Left
+    &-left
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+    &-title
+      margin-right: 50px
+    &-balance
+      white-space: nowrap
+      margin-right: 30px
+      padding: 2px 0
+    // Right
+    &-right
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      width: 40%
+      +media-max($bp-xl)
+        justify-content: start
+        width: 100%
+        margin-top: 10px
+    &-select
+      flex: 1
+      max-width: 200px
+      &:not(:last-child)
+        margin-right: 30px
+
+  // Line
+  &__line
+    display: flex
+    align-items: center
+    &:not(:last-child)
+      margin-bottom: 7px
+    &>*
+      &:first-child
+        margin-right: 15px

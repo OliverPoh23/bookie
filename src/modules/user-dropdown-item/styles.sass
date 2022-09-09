@@ -1,0 +1,32 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.user-dropdown-item
+  display: flex
+  align-items: center
+  border-radius: $r-primary
+  transition: 0.2s
+  padding: 10px 15px
+  cursor: pointer
+  user-select: none
+  width: 100%
+  &:hover,
+  &:focus,
+  &.is-active
+    .user-dropdown-item__title
+      color: $c-light
+    .user-dropdown-item__icon path
+      fill: $c-light
+  &:hover,
+  &:focus
+    background-color: rgba($c-primary-1, 0.4)
+  &.is-active
+    background-color: $c-primary-1
+  &__icon
+    margin-right: 20px
+    transition: 0.2s
+    path
+      fill: getColor('text-gray')
+  &__title
+    color: getColor('text-gray')
+    transition: 0.2s

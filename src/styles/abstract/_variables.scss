@@ -1,0 +1,56 @@
+// Fonts
+$base-font-size: 14px;
+$base-font-family: 'NotoSans', sans-serif;
+
+// Grid
+$columns: 12;
+$gutter : 30px;
+$spacer : 1rem;
+
+// Container
+$cnt: 1720px;
+
+// Breakpoints
+$bp-xxl: 1300px;
+$bp-xl: 1170px;
+$bp-lg: 991px;
+$bp-md: 767px;
+$bp-sm: 575px;
+$bp-xs: 460px;
+
+// Colors
+$c-light : #ffffff;
+$c-dark  : #3c4146;
+$c-gray-1: #f3f4f7;
+$c-gray-2: #e7ecf2;
+$c-gray-3: #9099a6;
+$c-primary-1: #5e00d6;
+$c-primary-2: #44009a;
+$c-accent-1 : #ffc700;
+$c-accent-2 : #48d09f;
+$c-danger   : #e1233d;
+
+// Themes
+$theme: (
+  base        : $c-gray-1,
+  theme       : $c-light,
+  text-primary: $c-dark,
+  text-alt    : $c-light,
+  text-gray   : $c-gray-3,
+);
+$theme-dark: (
+  base        : darken($c-dark, 8%),
+  theme       : $c-dark,
+  text-primary: $c-light,
+  text-alt    : $c-dark,
+  text-gray   : $c-light,
+);
+
+// UI colors
+$overlay-bg: rgba(#202329, 0.5);
+
+// UI elements
+$r-primary: 6px;
+$h-height : 80px;
+$s-primary: 0px 0px 10px rgba(33, 58, 88, 0.1);
+$s-alt    : 0px 0px 5px rgba(33, 58, 88, 0.4);

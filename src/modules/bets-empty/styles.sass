@@ -1,0 +1,15 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.bets-empty
+  padding: 100px 0
+  display: flex
+  text-align: center
+  flex-direction: column
+  +media-max($bp-xl)
+    padding: 60px 0
+  &__title
+    margin-bottom: 10px
+  &__link
+    font-weight: 600
+    color: $c-primary-1

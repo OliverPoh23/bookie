@@ -1,0 +1,10 @@
+@import ~styles/abstract/_grid
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.container
+  +container($cnt, 30px)
+  +media-max($bp-lg)
+    padding: 0 20px
+  +media-max($bp-sm)
+    padding: 0 15px

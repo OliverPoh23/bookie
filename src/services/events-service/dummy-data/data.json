@@ -1,0 +1,146 @@
+[
+  {
+    "id": "1",
+    "title": "Season 5 Trio FNCS Finals",
+    "date": "2/27/21",
+    "time": "4:00pm est",
+    "games": [
+      {
+        "id": "a1",
+        "game": "LG Slackes, 1P Acornski, G2 Jаhq",
+        "price": "+400"
+      },
+      {
+        "id": "a2",
+        "game": "LG PAMPER, C9 nosh, EP PAMPER",
+        "price": "+500"
+      },
+      {
+        "id": "a3",
+        "game": "BBG Bucke, BBG Khanasty, MackWood1x.",
+        "price": "+300"
+      },
+      {
+        "id": "a4",
+        "game": "Kn1pher, XPRT Xccept, Spayde OT",
+        "price": "+600"
+      },
+      {
+        "id": "a5",
+        "game": "LG Slackes, 1P Acornski, G2 Jаhq",
+        "price": "+400"
+      },
+      {
+        "id": "a6",
+        "game": "LG PAMPER, C9 nosh, EP PAMPER",
+        "price": "+500"
+      },
+      {
+        "id": "a7",
+        "game": "BBG Bucke, BBG Khanasty, MackWood1x.",
+        "price": "+300"
+      },
+      {
+        "id": "a8",
+        "game": "Kn1pher, XPRT Xccept, Spayde OT",
+        "price": "+600"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Dreamhack Solo Grand Finals",
+    "date": "2/27/21",
+    "time": "4:00pm est",
+    "games": [
+      {
+        "id": "b1",
+        "game": "LG Slackes, 1P Acornski, G2 Jаhq",
+        "price": "+400"
+      },
+      {
+        "id": "b2",
+        "game": "LG PAMPER, C9 nosh, EP PAMPER",
+        "price": "+500"
+      },
+      {
+        "id": "b3",
+        "game": "BBG Bucke, BBG Khanasty, MackWood1x.",
+        "price": "+300"
+      },
+      {
+        "id": "b4",
+        "game": "Kn1pher, XPRT Xccept, Spayde OT",
+        "price": "+600"
+      },
+      {
+        "id": "b5",
+        "game": "LG Slackes, 1P Acornski, G2 Jаhq",
+        "price": "+400"
+      },
+      {
+        "id": "b6",
+        "game": "LG PAMPER, C9 nosh, EP PAMPER",
+        "price": "+500"
+      },
+      {
+        "id": "b7",
+        "game": "BBG Bucke, BBG Khanasty, MackWood1x.",
+        "price": "+300"
+      },
+      {
+        "id": "b8",
+        "game": "Kn1pher, XPRT Xccept, Spayde OT",
+        "price": "+600"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Twitch Rivals Duos Grand Finals",
+    "date": "2/27/21",
+    "time": "5:00pm est",
+    "games": [
+      {
+        "id": "c1",
+        "game": "LG Slackes, 1P Acornski, G2 Jаhq",
+        "price": "+400"
+      },
+      {
+        "id": "c2",
+        "game": "LG PAMPER, C9 nosh, EP PAMPER",
+        "price": "+500"
+      },
+      {
+        "id": "c3",
+        "game": "BBG Bucke, BBG Khanasty, MackWood1x.",
+        "price": "+300"
+      },
+      {
+        "id": "c4",
+        "game": "Kn1pher, XPRT Xccept, Spayde OT",
+        "price": "+600"
+      },
+      {
+        "id": "c5",
+        "game": "LG Slackes, 1P Acornski, G2 Jаhq",
+        "price": "+400"
+      },
+      {
+        "id": "c6",
+        "game": "LG PAMPER, C9 nosh, EP PAMPER",
+        "price": "+500"
+      },
+      {
+        "id": "c7",
+        "game": "BBG Bucke, BBG Khanasty, MackWood1x.",
+        "price": "+300"
+      },
+      {
+        "id": "c8",
+        "game": "Kn1pher, XPRT Xccept, Spayde OT",
+        "price": "+600"
+      }
+    ]
+  }
+]

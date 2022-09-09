@@ -1,0 +1,39 @@
+@import ~styles/abstract/variables
+@import ~styles/abstract/mixins
+
+.table
+  border-radius: $r-primary
+  border-radius: 10px
+  border: 1px solid getColor('base')
+  width: 100%
+  overflow: auto
+  +media-max($bp-xl)
+    white-space: nowrap
+  &--bordered
+    .table__body
+      td:not(:last-child)
+        border-right: 1px solid getColor('base')
+  &__table
+    width: 100%
+    border-collapse: collapse
+    tr
+      vertical-align: top
+  &__head
+    background-color: getColor('base')
+    th
+      font-size: rem(14px)
+      line-height: 1
+      font-weight: 600
+      color: getColor('text-gray')
+      padding: 20px
+  &__body
+    tr
+      border-bottom: 1px solid getColor('base')
+      &:last-child
+        border-bottom: 0
+    td
+      font-size: rem(14px)
+      font-weight: 700
+      line-height: 1
+      color: getColor('text-primary')
+      padding: 15px 20px

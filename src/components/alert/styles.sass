@@ -1,0 +1,35 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+$c-success: #00d62e;
+
+.alert
+  position: fixed
+  top: 95px
+  left: 50%
+  transform: translateX(-50%)
+  width: 100%
+  z-index: 10000
+  margin: 0 auto
+  border-radius: $r-primary
+  padding: 20px
+  max-width: 240px
+  width: 100%
+  text-align: center
+  box-shadow: $s-alt
+  user-select: none
+  &.alert--success
+    background-color: $c-success
+    color: $c-light
+
+// Animations
+.alert-animation-enter
+  opacity: 0
+.alert-animation-enter-active
+  opacity: 1
+  transition: 0.3s
+.alert-animation-exit
+  opacity: 1
+.alert-animation-exit-active
+  opacity: 0
+  transition: 0.3s

@@ -1,0 +1,84 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.header
+  width: 100%
+  height: $h-height
+  &__wrap
+    position: fixed
+    top: 0
+    left: 0
+    height: $h-height
+    width: 100%
+    background-color: getColor('theme')
+    z-index: 200
+    box-shadow: $s-primary
+  &__container
+    display: flex
+    align-items: center
+    height: 100%
+
+  // Logo
+  &__logo
+    margin-right: 70px
+    +media-max($bp-xxl)
+      margin-right: 30px
+    +media-max($bp-md)
+      margin-right: 20px
+    &-icon
+      max-width: 200px
+      height: 85px
+      +media-max($bp-xxl)
+        max-width: 180px
+      +media-max($bp-sm)
+        max-width: 150px
+
+  // Center
+  &__center
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    flex: 1
+    +media-max($bp-xl)
+      position: fixed
+      top: 0
+      right: 0
+      height: 100%
+      width: 100%
+      flex: 0
+      display: block
+      max-width: 380px
+      padding: 20px
+      background-color: getColor('theme')
+      box-shadow: $s-primary
+      transform: translateX(100%)
+      transition: 0.2s
+      padding: 20px 15px
+      z-index: 1000
+      &.is-active
+        transform: translateX(0)
+
+    &-close
+      margin-bottom: 30px
+    &-regions
+      +media-max($bp-xl)
+        margin-bottom: 20px
+    &-items
+      display: flex
+      align-items: center
+      margin-left: auto
+    &-item
+      margin-right: 20px
+
+  // Right
+  &__right
+    margin-left: auto
+    display: flex
+    align-items: center
+  &__user
+    margin-right: 20px
+  &__burger
+    padding-left: 20px
+    border-left: 1px solid $c-gray-2
+    +media-max($bp-xs)
+      padding-left: 15px

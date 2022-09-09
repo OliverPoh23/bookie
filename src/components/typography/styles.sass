@@ -1,0 +1,65 @@
+@import ~styles/abstract/variables
+@import ~styles/abstract/mixins
+
+h1,.h1, h2,.h2, h3,.h3, h4,.h4, h5,.h5, h6,.h6
+  line-height: 1.2
+  font-weight: 700
+
+h1, .h1
+  font-size: rem(48px)
+h2, .h2
+  font-size: rem(28px)
+h3, .h3
+  font-size: rem(22px)
+h4, .h4
+  font-size: rem(18px)
+h5, .h5
+  font-size: rem(16px)
+h6, .h6
+  font-size: rem(14px)
+
+p, .p, .p-xl, .p-sm
+  line-height: 1.5
+  font-weight: 400
+p, .p
+  font-size: rem(14px)
+.p-xl
+  font-size: rem(16px)
+.p-sm
+  font-size: rem(12px)
+
+// Text colors
+.text-primary
+  color: getColor('text-primary')
+.text-gray-3
+  color: $c-gray-3
+.text-light
+  color: $c-light
+.text-accent-1
+  color: $c-accent-1
+.text-accent-2
+  color: $c-accent-2
+.text-danger
+  color: $c-danger
+
+// Text weights
+.text-regular
+  font-weight: 400
+.text-medium
+  font-weight: 500
+.text-semibold
+  font-weight: 600
+.text-bold
+  font-weight: 700
+
+// Text aligns
+.text-left
+  text-align: left
+.text-center
+  text-align: center
+.text-right
+  text-align: right
+
+// Text transforms
+.text-uppercase
+  text-transform: uppercase

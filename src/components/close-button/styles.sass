@@ -1,0 +1,26 @@
+@import ~styles/abstract/_grid
+@import ~styles/abstract/variables
+
+.close-button
+  width: 20px
+  height: 20px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 50%
+  border: 2px solid $c-danger
+  cursor: pointer
+  transition: 0.2s
+  &--dark
+    border: none
+    .close-button__icon
+      width: 20px
+      height: 20px
+      path
+        fill: $c-gray-3
+  &:hover,
+  &:focus
+    transform: scale(0.9)
+  &__icon
+    width: 8px
+    height: 8px

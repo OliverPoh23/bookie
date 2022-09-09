@@ -1,0 +1,55 @@
+@import ~styles/abstract/variables
+@import ~styles/abstract/mixins
+
+.checkbox
+  position: relative
+  display: inline-flex
+  vertical-align: top
+  align-items: center
+  cursor: pointer
+  user-select: none
+  text-transform: capitalize
+  &.checkbox--error
+    .checkbox__checkmark
+      border: 2px solid $c-danger
+  &__label
+    flex: 1
+    font-size: rem(14px)
+    font-weight: 500
+    line-height: 1.3
+    margin-left: 10px
+  &__box
+    position: relative
+    width: 20px
+    height: 20px
+  &__input
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0
+    &:focus ~ .checkbox__checkmark
+      box-shadow: $s-primary
+    &:checked ~ .checkbox__checkmark
+      background-color: $c-primary-1
+      border-color: $c-primary-1
+  &__checkmark
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border: 2px solid $c-gray-2
+    overflow: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: $r-primary
+    transition: 0.2s
+  &__error-msg
+    position: absolute
+    left: 30px
+    bottom: -15px
+    font-size: rem(10px)
+    color: $c-danger

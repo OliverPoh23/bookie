@@ -1,0 +1,11 @@
+@import ~styles/abstract/variables
+@import ~styles/abstract/mixins
+
+.content-box
+  min-height: 100%
+  width: 100%
+  background-color: getColor('theme')
+  border-radius: $r-primary
+  padding: 20px 20px 30px
+  +media-max($bp-sm)
+    padding: 20px 15px 30px

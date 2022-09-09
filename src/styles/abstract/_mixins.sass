@@ -1,0 +1,42 @@
+// Px to rem
+@function rem($size)
+  $remSize: $size / $base-font-size;
+  @return #{$remSize}rem;
+
+@function getColor($color)
+  @return var(--c-#{$color});
+
+// Crop line-height
+@mixin lh-crop($line-height, $capital-letter: 1)
+  &:before
+    content: ''
+    display: block
+    height: 0
+    width: 0
+    margin-top: calc((#{$capital-letter} - #{$line-height}) * 0.5em)
+
+// Background image
+@mixin bg-img($url, $size: cover, $position: center, $repeat: no-repeat)
+  background:
+    image: url('#{$url}')
+    size: $size
+    position: $position
+    repeat: $repeat
+
+// Size
+@mixin size($width, $height: $width)
+  width: $width
+  height: $height
+
+// Media queries
+@mixin media-min($size)
+  @media (min-width: $size + 1)
+    @content
+
+@mixin media-max($size)
+  @media (max-width: $size)
+    @content
+
+@mixin media-min-max($min, $max)
+  @media (min-width: $min) and (max-width: $max)
+    @content

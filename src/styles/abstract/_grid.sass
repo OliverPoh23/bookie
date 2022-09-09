@@ -1,0 +1,50 @@
+@import ./variables
+
+// Grid variables
+$gutter-half: ($gutter / 2)
+$col-width  : (100% / $columns)
+
+// Row
+@mixin row()
+  display: flex
+  flex-wrap: wrap
+  margin-left: -$gutter-half
+  margin-right: -$gutter-half
+
+// Container
+@mixin container($maxWidth: 100%, $padding: $gutter-half, $fluid: false)
+  margin: 0 auto
+  width: 100%
+  padding: 0 $padding
+  @if $fluid == false
+    max-width: $maxWidth
+
+// Col with paddings
+@mixin col($col: 0, $offset-col: false, $paddings: true)
+  @if $col > 0
+    flex: 0 0 #{$col-width * $col}
+    max-width: #{$col-width * $col}
+  @else
+    flex: 1 0 0
+  @if $offset-col
+    margin-left: #{$col-width * $offset-col}
+  @if $paddings
+    padding-left: $gutter-half
+    padding-right: $gutter-half
+
+// Col with margins
+@mixin col-mx($col: 0, $offset-col: false)
+  @if $col > 0
+    flex: 0 0 calc(#{$col-width * $col} - #{$gutter})
+    max-width: calc(#{$col-width * $col} - #{$gutter})
+  @if $offset-col
+    margin-left: calc(#{$col-width * $offset-col} + #{$gutter-half})
+  @else
+    margin-left: $gutter-half
+  margin-right: $gutter-half
+
+// Offset
+@function offset($offset: 0)
+  @return #{$col-width * $offset}
+@mixin offset($offset: 0)
+  margin-left: offset($offset)

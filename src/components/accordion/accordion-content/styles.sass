@@ -1,0 +1,11 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.accordion-content
+  max-height: 0
+  overflow: hidden
+  transition: 0.2s
+  &__wrap
+    padding: 0 20px 20px
+    +media-max($bp-sm)
+      padding: 0 15px 15px

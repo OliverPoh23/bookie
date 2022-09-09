@@ -1,0 +1,29 @@
+@import '~styles/abstract/variables'
+
+.dropdown-box
+  position: absolute
+  top: 100%
+  right: 0
+  margin-bottom: 20px
+  overflow: hidden
+  background-color: $c-light
+  box-shadow: $s-primary
+  border-radius: $r-primary
+  z-index: 1
+// Animations
+.dropdown-box-animation-enter
+  transform-origin: top center
+  opacity: 0
+  transform: scaleY(0);
+.dropdown-box-animation-enter-active
+  opacity: 1
+  transform: scaleY(1);
+  transition: 0.3s
+.dropdown-box-animation-exit
+  transform-origin: top center
+  opacity: 1
+  transform: scaleY(1);
+.dropdown-box-animation-exit-active
+  opacity: 0
+  transform: scaleY(0);
+  transition:  0.3s

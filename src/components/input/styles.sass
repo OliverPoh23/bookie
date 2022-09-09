@@ -1,0 +1,26 @@
+@import ~styles/abstract/variables
+@import ~styles/abstract/mixins
+
+.input
+  width: 100%
+  max-width: 100%
+  background-color: transparent
+  border: 1px solid $c-gray-2
+  border-radius: $r-primary
+  color: getColor('text-primary')
+  padding: 14px 20px
+  font-family: inherit
+  font-weight: 500
+  font-size: rem(14px)
+  line-height: 1
+  transition: 0.2s
+  +media-max($bp-xl)
+    padding: 12px 15px
+  &::placeholder
+    color: $c-gray-3
+  &:focus
+    box-shadow: $s-primary
+  &--invalid
+    border: 1px solid $c-danger !important
+  &--center
+    text-align: center

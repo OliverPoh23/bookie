@@ -1,0 +1,30 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.fixed-button
+  position: fixed
+  right: 30px
+  bottom: 30px
+  width: 60px
+  height: 60px
+  background-color: $c-light
+  box-shadow: $s-alt
+  border-radius: 50%
+  overflow: hidden
+  display: flex
+  justify-content: center
+  align-items: center
+  +media-max($bp-lg)
+    right: 20px
+    bottom: 20px
+  +media-max($bp-sm)
+    right: 15px
+    bottom: 15px
+  &__icon
+    width: 30px
+    height: 30px
+  &__text
+    position: absolute
+    top: 4px
+    right: 15px
+    color: $c-dark !important

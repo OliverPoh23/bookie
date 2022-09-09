@@ -1,0 +1,16 @@
+@import ~styles/abstract/grid
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.payment-operation
+  &__title
+    text-transform: capitalize
+  &__method
+    +row()
+    margin-bottom: 40px
+    &-item
+      +col(6)
+      +media-max($bp-md)
+        +col(12)
+        &:not(:last-child)
+          margin-bottom: 20px

@@ -1,0 +1,19 @@
+@import ~styles/abstract/variables
+@import ~styles/abstract/mixins
+
+.slider
+  &__track
+    height: 7px
+    border-radius: $r-primary
+    background-color: $c-primary-1
+    cursor: pointer
+    &.slider__track-1
+      background-color: $c-gray-2
+  &__thumb
+    top: -4px
+    border-radius: 50%
+    width: 15px
+    height: 15px
+    background-color: darken($c-primary-2, 10%)
+    outline: none
+    cursor: pointer

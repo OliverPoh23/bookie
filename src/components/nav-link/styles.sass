@@ -1,0 +1,22 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.nav-link
+  cursor: pointer
+  color: getColor('text-gray')
+  transition: 0.2s
+  outline: none
+  &:hover,
+  &:focus,
+  &.is-active
+    color: $c-dark
+  &--dark
+    &:hover,
+    &:focus,
+    &.is-active
+      color: $c-gray-3
+  &--accent
+    &:hover,
+    &:focus,
+    &.is-active
+      color: $c-accent-1

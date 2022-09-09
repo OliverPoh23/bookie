@@ -1,0 +1,32 @@
+@import ~styles/abstract/grid
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.referrals-screen
+  &__control
+    margin-bottom: 50px
+    &-items
+      +row()
+      align-items: center
+      margin-bottom: 20px
+  &__box
+    +col-mx(6)
+    +media-max($bp-xl)
+      +col-mx(12)
+      &:not(:last-child)
+        margin-bottom: 20px
+    &-group
+      display: flex
+      flex-wrap: wrap
+    &-input
+      flex: 1
+      margin-right: 15px
+      +media-max($bp-md)
+        flex: auto
+        width: 100%
+        margin-right: 0
+        margin-bottom: 10px
+  &__graphics
+    margin-bottom: 20px
+  &__info
+    color: $c-dark !important

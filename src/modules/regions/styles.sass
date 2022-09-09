@@ -1,0 +1,21 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.regions
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  +media-max($bp-xl)
+    justify-content: space-between
+  &__item
+    &.is-active,
+    &:hover
+      color: $c-dark
+    &.is-active
+      cursor: default
+    &:not(:last-child)
+      margin-right: 40px
+      +media-max($bp-xxl)
+        margin-right: 30px
+      +media-max($bp-xl)
+        margin-right: 0

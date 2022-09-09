@@ -1,0 +1,33 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.bet-slip
+  padding: 15px 0
+  border-bottom: 1px solid $c-gray-2
+
+  // Header
+  &__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 12px
+    &-title
+      width: 90%
+
+  // Details
+  &__details
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 12px
+    &-name
+      width: 80%
+
+  // Control
+  &__control
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 12px
+    &-input
+      width: 47%

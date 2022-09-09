@@ -1,0 +1,59 @@
+@import ~styles/abstract/variables
+@import ~styles/abstract/mixins
+
+.list
+  border: 1px solid getColor('base')
+  border-radius: $r-primary
+  &--alt
+    border-color: rgba($c-primary-1, 0.3)
+    .list__header
+      background-color: rgba($c-primary-1, 0.3)
+    .list__item
+      border-color: rgba($c-primary-1, 0.3)
+  &--blocked
+    .list__items:after
+      position: absolute
+      content: ''
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: rgba($c-primary-1, 0.5)
+      backdrop-filter: blur(5px)
+
+  &__header
+    padding: 15px 20px
+    background-color: getColor('base')
+    +media-max($bp-sm)
+      padding: 15px
+  &__items
+    position: relative
+    display: flex
+    flex-wrap: wrap
+  &__item
+    width: 50%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 12px 20px 10px
+    cursor: pointer
+    border-top: 1px solid getColor('base')
+    border-right: 1px solid getColor('base')
+    transition: 0.2s
+    +media-max($bp-sm)
+      padding: 12px 15px
+    +media-max($bp-xs)
+      width: 100%
+      border-right: 0 !important
+    &:hover,
+    &:focus
+      outline: none
+      background: rgba($c-primary-1, 0.1)
+      +media-max($bp-lg)
+        background: none
+    &.is-active
+      background: rgba($c-primary-1, 0.2)
+    &:nth-child(even)
+      border-right: 0
+    &-game
+      margin-right: 10px

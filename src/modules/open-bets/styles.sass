@@ -1,0 +1,36 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.open-bets
+  // Content
+  &__content
+    padding-top: 15px
+  &__header
+    position: relative
+    display: flex
+    justify-content: space-between
+    padding: 10px 0
+    z-index: 1
+    &::after
+      position: absolute
+      content: ''
+      top: 0
+      left: -20px
+      width: calc( 100% + 40px )
+      height: 100%
+      background-color: $c-gray-2
+      z-index: -1
+      +media-max($bp-sm)
+        width: calc( 100% + 30px )
+        left: -15px
+
+  // Items
+  &__items
+    width: calc( 100% + 40px )
+    padding: 0 20px
+    margin-left: -20px
+    max-height: 295px
+    +media-max($bp-sm)
+      width: calc( 100% + 30px )
+      padding: 0 15px
+      margin-left: -15px

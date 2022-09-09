@@ -1,0 +1,40 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.deposit-details
+  &__content
+    width: 100%
+    margin: 0 auto
+  &__icon
+    margin: 0 auto 70px
+    width: 64px
+    height: 64px
+  &__wrap
+    display: flex
+    margin: 0 -15px
+    flex-wrap: wrap
+  &__item
+    padding: 50px 20px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    flex: 1
+    margin: 0 15px
+    text-align: center
+    +media-max($bp-md)
+      flex: auto
+      width: 100%
+      &:first-child
+        margin-bottom: 20px
+    &-title
+      margin-bottom: 20px
+    &-qr
+      max-width: 220px
+    &-input
+      margin-bottom: 20px
+  &__or
+    display: flex
+    align-items: center
+    +media-max($bp-md)
+      display: none

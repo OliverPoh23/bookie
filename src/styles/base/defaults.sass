@@ -1,0 +1,67 @@
+@import ~styles/abstract/variables
+@import ~styles/abstract/mixins
+
+// Base styles
+*, *:before, *:after
+  box-sizing: border-box
+html, body
+  font-family: $base-font-family
+  font-size: $base-font-size
+  font-weight: 400
+  text-align: left
+  color: getColor('text-primary')
+  height: 100%
+body
+  position: relative
+  margin: 0
+  padding: 0
+  background-color: getColor('base')
+a, a:focus
+  outline: none
+  text-decoration: none
+  color: inherit
+ul
+  padding: 0
+  margin: 0
+  list-style: none
+figure
+  margin: 0
+label
+  outline: none
+svg
+  display: block
+h1, h2, h3, h4, h5, h6, p
+  margin: 0
+img
+  display: block
+  max-width: 100%
+
+button
+  border: none
+  padding: 0
+  margin: 0
+  background-color: transparent
+  cursor: pointer
+  font-family: inherit
+  &:focus
+    outline: none
+button::-moz-focus-inner
+  border: 0
+
+input
+  outline: none
+  border: none
+  box-shadow: none
+  margin: 0
+  display: block
+  font-family: inherit
+  &::-ms-clear
+    display: none
+    height: 0
+    width: 0
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+  &[type=number]
+    -moz-appearance: textfield

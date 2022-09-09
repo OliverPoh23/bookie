@@ -1,0 +1,43 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.help-screen
+  &__email
+    margin-top: 40px
+    margin-bottom: 30px
+    &-title
+      margin-bottom: 15px
+    &-link
+      color: $c-accent-1
+      font-size: rem(14px)
+      line-height: 1
+      font-weight: 600
+  &__topics
+    &-title
+      margin-bottom: 15px
+    &-wrap
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+  &__topic
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-direction: column
+    flex: 1 1 200px
+    padding: 20px
+    cursor: pointer
+    &:hover,
+    &:focus
+      .help-screen__topic-title
+        color: $c-primary-1
+      .help-screen__topic-icon path
+        fill: $c-primary-1
+    &-icon
+      margin-bottom: 15px
+      path
+        fill: getColor('text-gray')
+        transition: 0.2s
+    &-title
+      color: getColor('text-gray')
+      transition: 0.2s

@@ -1,0 +1,53 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.bet-slips
+  // Container
+  &__container
+    border-bottom: 1px dashed $c-gray-3
+    margin-bottom: 20px
+
+  // Items
+  &__items
+    width: calc( 100% + 40px )
+    max-height: 304px
+    padding: 0 20px
+    margin-left: -20px
+    +media-max($bp-lg)
+      max-height: 295px
+    +media-max($bp-sm)
+      width: calc( 100% + 30px )
+      padding: 0 15px
+      margin-left: -15px
+
+  // Footer
+  &__footer
+    display: flex
+    justify-content: space-between
+  &__totals
+    display: flex
+  &__total
+    display: flex
+    align-items: center
+    flex-direction: column
+    margin-right: 20px
+    text-align: center
+    &-title
+      margin-bottom: 10px
+    &-value
+      border-radius: $r-primary
+      background-color: $c-primary-1
+      font-size: rem(14px)
+      line-height: 1
+      font-weight: 500
+      color: $c-light
+      padding: 10px 20px
+      &--alt
+        color: $c-danger
+        background-color: lighten($c-danger, 40%)
+  &__winnings
+    display: flex
+    flex-direction: column
+    &-title
+      display: inline-block
+      margin-bottom: 17px

@@ -1,0 +1,12 @@
+@import "~styles/abstract/variables";
+
+:root{
+  @each $name, $color in $theme{
+    --c-#{$name}: #{$color};
+  }
+}
+.dark{
+  @each $name, $color in $theme-dark{
+    --c-#{$name}: #{$color};
+  }
+}

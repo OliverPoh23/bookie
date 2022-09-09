@@ -1,0 +1,45 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+$b-size: 25px
+
+.burger
+  position: relative
+  display: block
+  height: $b-size
+  width: $b-size
+  cursor: pointer
+  display: flex
+  justify-content: center
+  align-items: center
+  &:hover
+    span
+  &--no-border
+    border: none
+    height: $b-size
+    width: $b-size
+  span
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    display: block
+    width: $b-size
+    height: 1px
+    background-color: getColor('text-gray')
+    transition: 0.2s
+    &:before,
+    &:after,
+      position: absolute
+      content: ''
+      left: 0
+      width: $b-size
+      height: 1px
+      background-color: getColor('text-gray')
+    &:before
+      top: -7px
+      transform: rotate(0)
+      transition: 0.2s
+    &:after
+      bottom: -7px
+      transform: rotate(0)
+      transition: 0.2s

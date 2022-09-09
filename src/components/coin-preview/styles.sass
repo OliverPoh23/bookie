@@ -1,0 +1,23 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.coin-preview
+  display: flex
+  justify-content: center
+  align-items: center
+  padding-top: 150px
+  padding-bottom: 150px
+  cursor: pointer
+  transition: 0.2s
+  user-select: none
+  outline: none
+  +media-max($bp-lg)
+    padding-bottom: 100px
+    padding-top: 100px
+  &:hover,
+  &:focus
+    background-color: rgba($c-gray-2, 0.4)
+  &.is-active
+    background-color: $c-gray-2
+  &__icon
+    height: 45px

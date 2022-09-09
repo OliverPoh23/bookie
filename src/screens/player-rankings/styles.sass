@@ -1,0 +1,37 @@
+@import ~styles/abstract/mixins
+@import ~styles/abstract/variables
+
+.player-rankings
+  &__header
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    justify-content: space-between
+    // Left
+    &-left
+      display: flex
+      align-items: center
+    &-title
+      margin-right: 20px
+    // Right
+    &-right
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      flex: 1
+      +media-max($bp-md)
+        flex: auto
+        justify-content: flex-start
+        width: 100%
+        margin-top: 10px
+    &-select
+      max-width: 200px
+      width: 100%
+
+  // Line
+  &__line
+    display: flex
+    align-items: center
+    &>*
+      &:first-child
+        margin-right: 15px

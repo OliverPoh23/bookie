@@ -1,0 +1,78 @@
+@import ~styles/abstract/variables
+@import ~styles/abstract/mixins
+
+.accordion-tab
+  border-radius: $r-primary
+  outline: none
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  padding: 20px
+  cursor: pointer
+  user-select: none
+  +media-max($bp-sm)
+    padding: 20px 15px
+  &:focus-visible
+    background-color: rgba($c-gray-3, 0.1)
+  &__title
+    width: 35%
+    +media-max($bp-md)
+      width: calc( 100% - 45px )
+      margin-bottom: 10px
+  &__meta
+    width: 30%
+    padding: 0 15px
+    display: flex
+    align-items: center
+    justify-content: center
+    +media-max($bp-md)
+      width: calc( 100% - 40px )
+      justify-content: flex-start
+      padding: 0
+    &-item
+      &:first-child
+        margin-right: 20px
+        +media-max($bp-md)
+          margin-right: 10px
+  &__icon
+    width: 35%
+    display: flex
+    justify-content: flex-end
+    +media-max($bp-md)
+      position: absolute
+      width: 32px
+      right: 20px
+      top: 50%
+      transform: translateY(-50%)
+    +media-max($bp-sm)
+      right: 15px
+    &-circle
+      width: 32px
+      height: 32px
+      border-radius: 50%
+      display: flex
+      justify-content: center
+      align-items: center
+      border: 2px solid $c-gray-2
+    &-line
+      position: relative
+      width: 16px
+      height: 2px
+      border-radius: 5px
+      display: block
+      background-color: $c-gray-2
+      &:after
+        position: absolute
+        content: ''
+        background-color: $c-gray-2
+        transform: rotate(90deg)
+        display: block
+        width: 16px
+        height: 2px
+        border-radius: 5px
+        transition: 0.2s
+      &.is-expanded
+        &:after
+          opacity: 0

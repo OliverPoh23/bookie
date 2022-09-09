@@ -1,0 +1,39 @@
+@import ~styles/abstract/variables
+@import ~styles/abstract/mixins
+
+.events-screen
+  &__filters
+    margin-bottom: 30px
+  &__preview
+    display: flex
+    flex-wrap: wrap
+  &__list
+    width: 70%
+    padding-right: 15px
+    +media-max($bp-lg)
+      width: 100%
+      padding-right: 0
+    &-item
+      &:not(:last-child)
+        margin-bottom: 30px
+  &__bets
+    width: 30%
+    padding-left: 15px
+    +media-max($bp-lg)
+      position: fixed
+      background-color: getColor('theme')
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      overflow: auto
+      padding-left: 0
+      z-index: 300
+      transition: 0.2s
+      transform: translateY(100%)
+      &.is-active
+        transform: translateY(0)
+    &-close
+      margin: 20px 20px 0 auto
+      +media-max($bp-sm)
+        margin: 15px 15px 0 auto

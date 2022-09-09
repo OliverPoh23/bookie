@@ -1,0 +1,68 @@
+@import "~styles/abstract/variables"
+@import "~styles/abstract/mixins"
+
+@mixin b-variant($color)
+  background: $color
+  box-shadow: 0px 5px 0px darken($color, 10%)
+  &:hover,
+  &:focus
+    background: lighten($color, 25%)
+
+.button
+  position: relative
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  font-size: rem(14px)
+  line-height: 1
+  font-weight: 700
+  transition: 0.3s
+  cursor: pointer
+  user-select: none
+  border-radius: $r-primary
+  color: $c-light
+  margin-bottom: 5px
+
+  // Variants
+  &--primary
+    +b-variant($c-primary-1)
+  &--accent
+    +b-variant($c-accent-1)
+    color: $c-dark
+
+  // Sizes
+  &--xl
+    min-width: 200px
+    padding: 20px 30px
+    font-size: 16px
+    +media-max($bp-xl)
+      min-width: 180px
+      padding: 18px 30px
+    +media-max($bp-md)
+      min-width: 150px
+      padding: 15px 20px
+  &--lg
+    padding: 15px 20px
+    min-width: 150px
+    +media-max($bp-xl)
+      min-width: 130px
+      padding: 13px 20px
+  &--md
+    min-width: 100px
+    padding: 10px 20px
+    +media-max($bp-xl)
+      min-width: 80px
+      padding: 8px 20px
+  &--xs
+    min-width: auto
+    padding: 10px 20px
+
+  // States
+  &:disabled
+    opacity: 0.5
+    cursor: not-allowed
+  &--no-shadow
+    box-shadow: none
+    margin-bottom: 0
+  &--fluid
+    min-width: 100%
